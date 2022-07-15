@@ -5,7 +5,11 @@ function getNetwork(id) {
 }
 
 async function fetchResource(url) {
-  	let res = await fetch(url)
+  	let res = await fetch(url, {
+        headers: {
+            Accept: 'application/json',
+        }
+    })
     res = await res.json()
     return res
 }
