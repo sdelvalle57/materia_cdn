@@ -4,7 +4,7 @@ function getNetwork(id) {
     else return "Rinkeby"
 }
 
-readError(error) {
+function readError(error) {
     try {
         let message = error.message.split('\n')[0]
         try {
