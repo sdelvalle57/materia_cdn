@@ -4,6 +4,24 @@ function getNetwork(id) {
     else return "Rinkeby"
 }
 
+readError(error) {
+    try {
+        let message = error.message.split('\n')[0]
+        try {
+            message = error.message.split('(error=')[1].split(', method')[0]
+            const metamaskError = JSON.parse(message)
+            return (
+                metamaskError.message.charAt(0).toUpperCase() +
+                metamaskError.message.slice(1)
+            )
+        } catch (e) {
+            return message
+        }
+    } catch (e) {
+        return error.message
+    }
+}
+
 function getMateriaAbi() {
     return [
     {
