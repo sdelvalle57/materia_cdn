@@ -10,9 +10,8 @@ async function fetchResource(url) {
           Accept: 'application/json',
           "Access-Control-Allow-Origin": "*"
       },
-      {
-        mode: 'cors'
-    }
+      mode: "cors"
+    
   })
   res = await res.json()
   return res
