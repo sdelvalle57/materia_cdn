@@ -4,6 +4,12 @@ function getNetwork(id) {
     else return "Rinkeby"
 }
 
+async function fetchResource(url) {
+  	let res = await fetch(url)
+    res = await res.json()
+    return res
+}
+
 function readError(error) {
     try {
         let message = error.message.split('\n')[0]
