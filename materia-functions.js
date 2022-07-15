@@ -4,15 +4,6 @@ function getNetwork(id) {
     else return "Rinkeby"
 }
 
-async function fetchResource(url) {
-    try {
-        let res = await fetch(url)
-        res = await res.json()
-        return res
-    } catch(e) {
-        console.log(e)
-    }
-}
 
 function readError(error) {
     try {
