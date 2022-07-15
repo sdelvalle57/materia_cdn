@@ -5,14 +5,7 @@ function getNetwork(id) {
 }
 
 async function fetchResource(url) {
-    let res = await fetch(url, {
-        headers: {
-            Accept: 'application/json',
-            'Access-Control-Allow-Headers': "*"
-        },
-        mode: "cors"
-
-    })
+    let res = await fetch(url)
     res = await res.json()
     return res
 }
