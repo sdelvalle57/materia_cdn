@@ -5,9 +5,13 @@ function getNetwork(id) {
 }
 
 async function fetchResource(url) {
-    let res = await fetch(url)
-    res = await res.json()
-    return res
+    try {
+        let res = await fetch(url)
+        res = await res.json()
+        return res
+    } catch(e) {
+        console.log(e)
+    }
 }
 
 function readError(error) {
