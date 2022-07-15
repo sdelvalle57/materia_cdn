@@ -674,7 +674,7 @@ function getMateriaAbi() {
 }
 
 function getAntonymAbi() {
-    return = [
+    return [
     {
       "inputs": [],
       "stateMutability": "nonpayable",
