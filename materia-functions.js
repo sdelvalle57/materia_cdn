@@ -5,14 +5,14 @@ function getNetwork(id) {
 }
 
 async function fetchResource(url) {
-  	let res = await fetch(url, {
-        headers: {
-            Accept: 'application/json',
-            "Access-Control-Allow-Origin", "*"
-        }
-    })
-    res = await res.json()
-    return res
+    let res = await fetch(url, {
+      headers: {
+          Accept: 'application/json',
+          "Access-Control-Allow-Origin": "*"
+      }
+  })
+  res = await res.json()
+  return res
 }
 
 function readError(error) {
