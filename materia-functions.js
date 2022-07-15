@@ -8,6 +8,7 @@ async function fetchResource(url) {
   	let res = await fetch(url, {
         headers: {
             Accept: 'application/json',
+            "Access-Control-Allow-Origin", "*"
         }
     })
     res = await res.json()
