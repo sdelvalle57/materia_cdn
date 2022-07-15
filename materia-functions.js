@@ -8,7 +8,9 @@ async function fetchResource(url) {
     let res = await fetch(url, {
         headers: {
             Accept: 'application/json',
+            'Access-Control-Allow-Headers': "*"
         },
+        mode: "cors"
 
     })
     res = await res.json()
